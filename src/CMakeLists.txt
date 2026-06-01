@@ -27,8 +27,6 @@ target_sources(rdsparser PRIVATE
         utils.c
 )
 
-target_include_directories(rdsparser PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
-
 if (RDSPARSER_DISABLE_HEAP)
     target_compile_definitions(rdsparser PUBLIC RDSPARSER_DISABLE_HEAP)
 endif()
