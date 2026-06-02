@@ -15,16 +15,6 @@ add_subdirectory(src)
 
 target_include_directories(rdsparser PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-#if(RDSPARSER_DISABLE_HEAP)
-#    add_definitions(-DRDSPARSER_DISABLE_HEAP)
-#endif()
-
-#if(RDSPARSER_DISABLE_UNICODE)
-#    add_definitions(-DRDSPARSER_DISABLE_UNICODE)
-#endif()
-
-#include_directories(librdsparser PRIVATE include)
-
 if(NOT RDSPARSER_DISABLE_TESTS)
     enable_testing()
     add_subdirectory(test)
