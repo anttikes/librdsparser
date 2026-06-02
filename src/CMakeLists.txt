@@ -34,14 +34,3 @@ endif()
 if (RDSPARSER_DISABLE_UNICODE)
     target_compile_definitions(rdsparser PUBLIC RDSPARSER_DISABLE_UNICODE)
 endif()
-
-#add_library(rdsparser SHARED ${SOURCE_FILES})
-#set_target_properties(rdsparser PROPERTIES PUBLIC_HEADER librdsparser.h)
-
-#add_library(rdsparser_static STATIC ${SOURCE_FILES})
-#set_target_properties(rdsparser_static PROPERTIES PUBLIC_HEADER librdsparser.h)
-
-#if(RDSPARSER_DISABLE_HEAP)
-    #set_target_properties(rdsparser PROPERTIES PUBLIC_HEADER librdsparser_private.h)
-    #set_target_properties(rdsparser_static PROPERTIES PUBLIC_HEADER librdsparser_private.h)
-#endif()
