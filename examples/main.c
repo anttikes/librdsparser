@@ -277,6 +277,7 @@ callback_af(rdsparser_t *rds,
 
 static void
 callback_ps(rdsparser_t *rds,
+            bool         changed,
             void        *user_data)
 {
     const rdsparser_string_t *ps = rdsparser_get_ps(rds);
@@ -301,6 +302,7 @@ callback_ps(rdsparser_t *rds,
 static void
 callback_rt(rdsparser_t         *rds,
             rdsparser_rt_flag_t  flag,
+            bool                 changed,
             void                *user_data)
 {
     const rdsparser_string_t *rt = rdsparser_get_rt(rds, flag);
@@ -314,6 +316,7 @@ callback_rt(rdsparser_t         *rds,
 
 static void
 callback_ptyn(rdsparser_t *rds,
+              bool         changed,
               void        *user_data)
 {
     const rdsparser_string_t *ptyn = rdsparser_get_ptyn(rds);
