@@ -88,11 +88,11 @@ rdsparser_group2_parse(rdsparser_t             *rds,
                                               errors,
                                               position);
 
-    if (changed &&
-        rds->callback_rt)
+    if (rds->callback_rt)
     {
         rds->callback_rt(rds,
                          rt_flag,
+                         changed,
                          rds->user_data);
     }
 }

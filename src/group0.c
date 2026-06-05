@@ -93,11 +93,9 @@ rdsparser_group0_parse(rdsparser_t             *rds,
                                                   errors,
                                                   position);
 
-    if (changed &&
-        rds->callback_ps)
+    if (rds->callback_ps)
     {
-        rds->callback_ps(rds,
-                         rds->user_data);
+        rds->callback_ps(rds, changed, rds->user_data);
     }
 
     if (flag == RDSPARSER_GROUP_FLAG_A)

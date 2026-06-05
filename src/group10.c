@@ -49,10 +49,9 @@ rdsparser_group10a_parse(rdsparser_t             *rds,
                                               errors,
                                               position + 2);
 
-    if (changed &&
-        rds->callback_ptyn)
+    if (rds->callback_ptyn)
     {
-        rds->callback_ptyn(rds, rds->user_data);
+        rds->callback_ptyn(rds, changed, rds->user_data);
     }
 }
 

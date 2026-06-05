@@ -399,21 +399,21 @@ rdsparser_register_af(rdsparser_t  *rds,
 
 void
 rdsparser_register_ps(rdsparser_t  *rds,
-                      void        (*callback_ps)(rdsparser_t*, void*))
+                      void        (*callback_ps)(rdsparser_t*, bool, void*))
 {
     rds->callback_ps = callback_ps;
 }
 
 void
 rdsparser_register_rt(rdsparser_t  *rds,
-                      void        (*callback_rt)(rdsparser_t*, rdsparser_rt_flag_t, void*))
+                      void        (*callback_rt)(rdsparser_t*, rdsparser_rt_flag_t, bool, void*))
 {
     rds->callback_rt = callback_rt;
 }
 
 void
 rdsparser_register_ptyn(rdsparser_t  *rds,
-                        void        (*callback_ptyn)(rdsparser_t*, void*))
+                        void        (*callback_ptyn)(rdsparser_t*, bool, void*))
 {
     rds->callback_ptyn = callback_ptyn;
 }

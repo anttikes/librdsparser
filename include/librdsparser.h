@@ -417,9 +417,9 @@ void rdsparser_register_ms(rdsparser_t *rds, void (*callback_ms)(rdsparser_t*, v
 void rdsparser_register_ecc(rdsparser_t *rds, void (*callback_ecc)(rdsparser_t*, void*));
 void rdsparser_register_country(rdsparser_t *rds, void (*callback_country)(rdsparser_t*, void*));
 void rdsparser_register_af(rdsparser_t *rds, void (*callback_af)(rdsparser_t*, uint32_t, void*));
-void rdsparser_register_ps(rdsparser_t *rds, void (*callback_ps)(rdsparser_t*, void*));
-void rdsparser_register_rt(rdsparser_t *rds, void (*callback_rt)(rdsparser_t*, rdsparser_rt_flag_t, void*));
-void rdsparser_register_ptyn(rdsparser_t *rds, void (*callback_ptyn)(rdsparser_t*, void*));
+void rdsparser_register_ps(rdsparser_t *rds, void (*callback_ps)(rdsparser_t*, bool, void*));
+void rdsparser_register_rt(rdsparser_t *rds, void (*callback_rt)(rdsparser_t*, rdsparser_rt_flag_t, bool, void*));
+void rdsparser_register_ptyn(rdsparser_t *rds, void (*callback_ptyn)(rdsparser_t*, bool, void*));
 void rdsparser_register_ct(rdsparser_t *rds, void (*callback_ct)(rdsparser_t*, const rdsparser_ct_t*, void*));
 void rdsparser_register_lps(rdsparser_t *rds, void (*callback_lps)(rdsparser_t*, void*));
 
